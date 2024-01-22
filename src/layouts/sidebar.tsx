@@ -9,6 +9,7 @@ export default function Sidebar() {
     const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
 
+    console.log(user);
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
             setUser(user);
