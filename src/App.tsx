@@ -11,11 +11,11 @@ export default function App() {
       <Toaster />
       <AllMusicsModal />
       <MusicModal />
-      <div className='flex justify-between'>
-        <div className='w-1/3'>
-          <Sidebar />
+      <div className='flex'>
+        <Sidebar />
+        <div className='p-4'>
+          <Shortcut />
         </div>
-        <Shortcut />
         <AuthScreen />
       </div>
     </>

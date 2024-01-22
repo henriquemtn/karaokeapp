@@ -1,7 +1,6 @@
 // src/components/AuthScreen.tsx
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase/firebase";
-import Register from "../components/Register";
 import { useNavigate } from "react-router-dom";
 
 const AuthScreen: React.FC = () => {
@@ -36,13 +35,12 @@ const AuthScreen: React.FC = () => {
                     // Conteúdo quando não estiver logado
                     <div>
                         <h2>You are not logged in</h2>
-                        <Register />
                     </div>
                 ) : (
                     // Conteúdo quando estiver logado
-                    <div>
+                    <div className="p-4 flex flex-col text-end">
                         <h2>Welcome, {user.email}!</h2>
-                        <button onClick={handleSignOut}>Sign Out</button>
+                        <button onClick={handleSignOut}  className="font-medium">Sign Out</button>
 
 
                     </div>
