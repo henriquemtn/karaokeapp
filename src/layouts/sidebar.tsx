@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
 export default function Sidebar() {
-    const [setUser] = useState<any>(null);
+    const [user, setUser] = useState<any>(null);
     const [houseInfo, setHouseInfo] = useState<any>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const navigate = useNavigate();
